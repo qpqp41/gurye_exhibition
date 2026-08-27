@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>구례 전시</title>
+
+
+    <style>
+
+        /* --------------------
+           기본 설정
+        -------------------- */
+
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+        }
+
+
+        /* --------------------
+           각 장면
+        -------------------- */
+
+        .scene {
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+        }
+
+
+        /* --------------------
+           1번 : 전시 소개
+        -------------------- */
+
+        .intro-scene {
+            height: 60vh;
+            box-sizing: border-box;
+            padding-top: 5vh;
+        }
+
+
+        .intro-content {
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+
+        .intro-content h2 {
+            font-size: 34px;
+            font-weight: normal;
+            color: #f5d547;
+
+            margin: 0 0 38px 0;
+        }
+
+
+        .intro-content p {
+            font-size: 15px;
+            line-height: 1.8;
+
+            margin: 0 auto 12px auto;
+
+            max-width: 600px;
+        }
+
+
+        .intro-content p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* --------------------
+           2번 : 포스터
+        -------------------- */
+
+        .poster {
+            height: 70vh;
+        }
+
+
+        .poster img {
+            max-width: 70%;
+            max-height: 85vh;
+        }
+
+
+        /* --------------------
+           3번 : 구례의 소리
+        -------------------- */
+
+        .sound-content {
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+
+        .small-title {
+            width: 100%;
+
+            font-size: 16px;
+            letter-spacing: 4px;
+
+            text-align: center;
+
+            box-sizing: border-box;
+        }
+
+
+        .sound-content h2 {
+            font-size: 40px;
+            font-weight: normal;
+            margin: 20px 0;
+        }
+
+
+        .sound-content .description {
+            margin-bottom: 40px;
+            line-height: 2;
+        }
+
+
+        .sound-content audio {
+            width: 400px;
+            max-width: 80vw;
+        }
+
+
+        /* --------------------
+           4번 : 얼굴에 대한 글
+        -------------------- */
+
+        .text-scene {
+            height: 75vh;
+        }
+
+
+        .text-content {
+            width: 80%;
+            max-width: 800px;
+            text-align: left;
+        }
+
+
+        .text-content h2 {
+            font-size: 26px;
+            font-weight: normal;
+            text-align: left;
+            line-height: 1.6;
+
+            margin: 0 0 45px 0;
+        }
+
+
+        .text-content p {
+            font-size: 16px;
+            line-height: 2;
+
+            width: 100%;
+            margin: 0;
+
+            text-align: left;
+        }
+
+
+        /* --------------------
+           5번 : 완성된 얼굴
+        -------------------- */
+
+        .face {
+            flex-direction: column;
+
+            height: auto;
+            min-height: 100vh;
+
+            padding-top: 8vh;
+            padding-bottom: 10vh;
+
+            box-sizing: border-box;
+        }
+
+
+        .face img {
+            max-width: 90%;
+            max-height: 82vh;
+        }
+
+
+        /* --------------------
+           작품 캡션
+        -------------------- */
+
+        .work-caption {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+
+        .work-caption .work-title {
+            font-size: 34px;
+            font-weight: normal;
+
+            margin: 0 0 8px 0;
+        }
+
+
+        .work-caption .work-info {
+            font-size: 13px;
+            font-weight: normal;
+
+            margin: 0;
+        }
+
+
+        /* --------------------
+           작품 의도 설명
+        -------------------- */
+
+        .work-intention {
+            width: 80%;
+            max-width: 800px;
+
+            text-align: left;
+
+            margin-top: 45px;
+        }
+
+
+        .work-intention .intention-text {
+            font-size: 14px;
+            font-weight: normal;
+
+            line-height: 1.9;
+
+            margin: 0 auto;
+
+            max-width: 750px;
+
+            text-align: left;
+        }
+
+
+        /* --------------------
+           6번 : 추가 사진에 대한 글
+        -------------------- */
+
+        .text7-scene {
+            height: 75vh;
+        }
+
+
+        .text7-content {
+            width: 80%;
+            max-width: 800px;
+
+            text-align: left;
+        }
+
+
+        .text7-content h2 {
+            font-size: 26px;
+            font-weight: normal;
+
+            text-align: left;
+
+            line-height: 1.6;
+
+            margin: 0 0 45px 0;
+        }
+
+
+        .text7-content p {
+            font-size: 16px;
+            line-height: 2;
+
+            width: 100%;
+
+            margin: 0;
+
+            text-align: left;
+        }
+
+
+        /* --------------------
+           7번 : 추가 사진
+        -------------------- */
+
+        .photo6 {
+            height: auto;
+            min-height: 100vh;
+
+            flex-direction: column;
+
+            padding-top: 8vh;
+            padding-bottom: 10vh;
+
+            box-sizing: border-box;
+        }
+
+
+        .photo6 img {
+            max-width: 90%;
+            max-height: 82vh;
+        }
+
+
+        /* --------------------
+           8번 : 그림에 대한 글
+        -------------------- */
+
+        .text8-scene {
+            height: 75vh;
+        }
+
+
+        .text8-content {
+            width: 80%;
+            max-width: 800px;
+
+            text-align: left;
+        }
+
+
+        .text8-content h2 {
+            font-size: 26px;
+            font-weight: normal;
+
+            text-align: left;
+
+            line-height: 1.6;
+
+            margin: 0 0 45px 0;
+        }
+
+
+        .text8-content p {
+            font-size: 16px;
+            line-height: 2;
+
+            width: 100%;
+
+            margin: 0;
+
+            text-align: left;
+        }
+
+
+        /* --------------------
+           9번 : 제작 과정
+           이미지 클릭 → 유튜브
+        -------------------- */
+
+        .making-scene {
+            height: auto;
+            min-height: 100vh;
+
+            flex-direction: column;
+
+            padding-top: 8vh;
+            padding-bottom: 10vh;
+
+            box-sizing: border-box;
+        }
+
+
+        .youtube-button {
+            display: block;
+
+            width: 85%;
+            max-width: 1200px;
+
+            cursor: pointer;
+
+            transition: opacity 0.3s;
+        }
+
+
+        .youtube-button img {
+            width: 100%;
+            height: auto;
+
+            display: block;
+        }
+
+
+        .youtube-button:hover {
+            opacity: 0.7;
+        }
+
+
+        /* --------------------
+           10번 : 칭찬에 대한 글
+        -------------------- */
+
+        .text10-scene {
+            height: 75vh;
+        }
+
+
+        .text10-content {
+            width: 80%;
+            max-width: 800px;
+
+            text-align: left;
+        }
+
+
+        .text10-content h2 {
+            font-size: 26px;
+            font-weight: normal;
+
+            text-align: left;
+
+            line-height: 1.6;
+
+            margin: 0 0 45px 0;
+        }
+
+
+        .text10-content p {
+            font-size: 16px;
+            line-height: 2;
+
+            width: 100%;
+
+            margin: 0;
+
+            text-align: left;
+        }
+
+
+        /* --------------------
+           11번 : 우리가 지나온 구례
+        -------------------- */
+
+        .text11-scene {
+            height: 75vh;
+        }
+
+
+        .text11-content {
+            width: 80%;
+            max-width: 800px;
+
+            text-align: left;
+        }
+
+
+        .text11-content h2 {
+            font-size: 26px;
+            font-weight: normal;
+
+            color: #f5d547;
+
+            text-align: left;
+
+            line-height: 1.6;
+
+            margin: 0 0 45px 0;
+        }
+
+
+        .text11-content p {
+            font-size: 16px;
+            line-height: 2;
+
+            width: 100%;
+
+            margin: 0;
+
+            text-align: left;
+        }
+
+
+        /* --------------------
+           12번 : 아카이빙 영상
+           이미지 클릭 → 유튜브
+        -------------------- */
+
+        .archiving-scene {
+            height: auto;
+            min-height: 100vh;
+
+            flex-direction: column;
+
+            padding-top: 8vh;
+            padding-bottom: 10vh;
+
+            box-sizing: border-box;
+        }
+
+
+        .archiving-button {
+            display: block;
+
+            width: 85%;
+            max-width: 1200px;
+
+            cursor: pointer;
+
+            transition: opacity 0.3s;
+        }
+
+
+        .archiving-button img {
+            width: 100%;
+            height: auto;
+
+            display: block;
+        }
+
+
+        .archiving-button:hover {
+            opacity: 0.7;
+        }
+
+
+        /* --------------------
+           13번 : 예술이라는 게...
+        -------------------- */
+
+        .text13-scene {
+            height: 75vh;
+        }
+
+
+        .text13-content {
+            width: 80%;
+            max-width: 800px;
+
+            text-align: left;
+        }
+
+
+        .text13-content h2 {
+            font-size: 26px;
+            font-weight: normal;
+
+            text-align: left;
+
+            line-height: 1.6;
+
+            margin: 0 0 45px 0;
+        }
+
+
+        .text13-content p {
+            font-size: 16px;
+            line-height: 2;
+
+            width: 100%;
+
+            margin: 0;
+
+            text-align: left;
+        }
+
+
+        /* --------------------
+           마지막 영상 팝업 버튼
+           크레딧 위에 배치
+        -------------------- */
+
+        .popup-video-trigger {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+        }
+
+
+        .popup-video-trigger img {
+            width: 100px;
+
+            cursor: pointer;
+
+            display: block;
+
+            transition: opacity 0.3s;
+        }
+
+
+        .popup-video-trigger img:hover {
+            opacity: 0.7;
+        }
+
+
+        /* --------------------
+           크레딧
+        -------------------- */
+
+        .credits {
+            text-align: center;
+
+            padding-top: 3vh;
+            padding-bottom: 8vh;
+
+            font-size: 11px;
+            line-height: 2;
+
+            color: white;
+        }
+
+
+        .credits p {
+            margin: 0 0 8px 0;
+        }
+
+
+        .credits p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* --------------------
+           영상 팝업
+        -------------------- */
+
+        .video-popup {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.95);
+
+            display: none;
+
+            justify-content: center;
+            align-items: center;
+
+            z-index: 1000;
+        }
+
+
+        .video-popup.show {
+            display: flex;
+        }
+
+
+        .video-popup video {
+            width: 85%;
+
+            max-width: 1200px;
+
+            max-height: 85vh;
+        }
+
+
+        /* --------------------
+           영상 닫기 버튼
+        -------------------- */
+
+        .close-button {
+            position: absolute;
+
+            top: 20px;
+            right: 30px;
+
+            background: none;
+
+            border: none;
+
+            color: white;
+
+            font-size: 40px;
+
+            cursor: pointer;
+
+            z-index: 1001;
+        }
+
+
+        /* ==================================================
+           모바일 화면
+        ================================================== */
+
+        @media (max-width: 600px) {
+
+
+            /* --------------------
+               1번
+            -------------------- */
+
+            .intro-scene {
+                height: 65vh;
+                padding-top: 6vh;
+            }
+
+
+            .intro-content {
+                width: 92%;
+                max-width: 360px;
+            }
+
+
+            .intro-content h2 {
+                font-size: 27px;
+                margin-bottom: 30px;
+                white-space: nowrap;
+            }
+
+
+            .intro-content p {
+                font-size: 15px;
+                line-height: 1.7;
+
+                max-width: 330px;
+
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+            }
+
+
+            /* --------------------
+               2번
+            -------------------- */
+
+            .poster {
+                height: 70vh;
+            }
+
+
+            .poster img {
+                max-width: 82%;
+                max-height: 62vh;
+            }
+
+
+            /* --------------------
+               3번
+            -------------------- */
+
+            .sound-scene {
+                height: 70vh;
+            }
+
+
+            .sound-content {
+                width: 88%;
+                max-width: 360px;
+            }
+
+
+            .small-title {
+                width: 100%;
+
+                font-size: 15px;
+                letter-spacing: 3px;
+
+                text-align: center;
+
+                box-sizing: border-box;
+            }
+
+
+            .sound-content h2 {
+                font-size: 32px;
+                margin: 16px 0;
+            }
+
+
+            .sound-content .description {
+                font-size: 15px;
+                line-height: 1.8;
+                margin-bottom: 30px;
+            }
+
+
+            .sound-content audio {
+                width: 90%;
+                max-width: 350px;
+            }
+
+
+            /* --------------------
+               4번
+            -------------------- */
+
+            .text-scene {
+                height: 75vh;
+            }
+
+
+            .text-content {
+                width: 88%;
+                max-width: 360px;
+            }
+
+
+            .text-content h2 {
+                font-size: 21px;
+                line-height: 1.7;
+
+                margin-bottom: 30px;
+
+                text-align: left;
+            }
+
+
+            .text-content p {
+                font-size: 15px;
+                line-height: 1.9;
+
+                width: 100%;
+
+                text-align: left;
+            }
+
+
+            /* --------------------
+               5번
+            -------------------- */
+
+            .face {
+                height: auto;
+                min-height: 80vh;
+
+                padding-top: 8vh;
+                padding-bottom: 10vh;
+
+                box-sizing: border-box;
+            }
+
+
+            .face img {
+                max-width: 92%;
+                max-height: 58vh;
+            }
+
+
+            .work-caption {
+                margin-top: 14px;
+            }
+
+
+            .work-caption .work-title {
+                font-size: 20px;
+                margin-bottom: 6px;
+            }
+
+
+            .work-caption .work-info {
+                font-size: 12px;
+            }
+
+
+            .work-intention {
+                width: 88%;
+                max-width: 360px;
+
+                margin-top: 38px;
+            }
+
+
+            .work-intention .intention-text {
+                font-size: 13px;
+
+                line-height: 1.9;
+
+                text-align: left;
+            }
+
+
+            /* --------------------
+               6번
+            -------------------- */
+
+            .text7-scene {
+                height: 60vh;
+            }
+
+
+            .text7-content {
+                width: 88%;
+                max-width: 360px;
+            }
+
+
+            .text7-content h2 {
+                font-size: 21px;
+
+                line-height: 1.7;
+
+                margin-bottom: 30px;
+
+                text-align: left;
+            }
+
+
+            .text7-content p {
+                font-size: 15px;
+
+                line-height: 1.9;
+
+                width: 100%;
+
+                text-align: left;
+            }
+
+
+            /* --------------------
+               7번
+            -------------------- */
+
+            .photo6 {
+                height: auto;
+                min-height: 70vh;
+
+                padding-top: 8vh;
+                padding-bottom: 10vh;
+
+                box-sizing: border-box;
+            }
+
+
+            .photo6 img {
+                max-width: 92%;
+                max-height: 58vh;
+            }
+
+
+            /* --------------------
+               8번
+            -------------------- */
+
+            .text8-scene {
+                height: 60vh;
+            }
+
+
+            .text8-content {
+                width: 88%;
+                max-width: 360px;
+            }
+
+
+            .text8-content h2 {
+                font-size: 21px;
+
+                line-height: 1.7;
+
+                margin-bottom: 30px;
+
+                text-align: left;
+            }
+
+
+            .text8-content p {
+                font-size: 15px;
+
+                line-height: 1.9;
+
+                width: 100%;
+
+                text-align: left;
+            }
+
+
+            /* --------------------
+               9번 : 제작 과정
+            -------------------- */
+
+            .making-scene {
+                height: auto;
+                min-height: 50vh;
+
+                padding-top: 8vh;
+                padding-bottom: 10vh;
+
+                box-sizing: border-box;
+            }
+
+
+            .youtube-button {
+                width: 92%;
+            }
+
+
+            /* --------------------
+               10번
+            -------------------- */
+
+            .text10-scene {
+                height: 60vh;
+            }
+
+
+            .text10-content {
+                width: 88%;
+                max-width: 360px;
+            }
+
+
+            .text10-content h2 {
+                font-size: 21px;
+
+                line-height: 1.7;
+
+                margin-bottom: 30px;
+
+                text-align: left;
+            }
+
+
+            .text10-content p {
+                font-size: 15px;
+
+                line-height: 1.9;
+
+                width: 100%;
+
+                text-align: left;
+            }
+
+
+            /* --------------------
+               11번
+            -------------------- */
+
+            .text11-scene {
+                height: 50vh;
+            }
+
+
+            .text11-content {
+                width: 88%;
+                max-width: 360px;
+            }
+
+
+            .text11-content h2 {
+                font-size: 21px;
+
+                line-height: 1.7;
+
+                margin-bottom: 30px;
+
+                text-align: left;
+
+                color: #f5d547;
+            }
+
+
+            .text11-content p {
+                font-size: 15px;
+
+                line-height: 1.9;
+
+                width: 100%;
+
+                text-align: left;
+            }
+
+
+            /* --------------------
+               12번 : 아카이빙
+            -------------------- */
+
+            .archiving-scene {
+                height: auto;
+                min-height: 40vh;
+
+                padding-top: 8vh;
+                padding-bottom: 10vh;
+
+                box-sizing: border-box;
+            }
+
+
+            .archiving-button {
+                width: 92%;
+            }
+
+
+            /* --------------------
+               13번 : 예술이라는 게...
+            -------------------- */
+
+            .text13-scene {
+                height: 60vh;
+            }
+
+
+            .text13-content {
+                width: 88%;
+                max-width: 360px;
+            }
+
+
+            .text13-content h2 {
+                font-size: 21px;
+
+                line-height: 1.7;
+
+                margin-bottom: 30px;
+
+                text-align: left;
+            }
+
+
+            .text13-content p {
+                font-size: 15px;
+
+                line-height: 1.9;
+
+                width: 100%;
+
+                text-align: left;
+            }
+
+
+            /* --------------------
+               팝업 버튼
+            -------------------- */
+
+            .popup-video-trigger {
+                margin-top: 4vh;
+                margin-bottom: 4vh;
+            }
+
+
+            .popup-video-trigger img {
+                width: 75px;
+            }
+
+
+            /* --------------------
+               크레딧
+            -------------------- */
+
+            .credits {
+                font-size: 10px;
+
+                line-height: 1.9;
+
+                padding-top: 2vh;
+                padding-bottom: 6vh;
+            }
+
+
+            /* --------------------
+               영상 팝업
+            -------------------- */
+
+            .video-popup video {
+                width: 94%;
+
+                max-height: 80vh;
+            }
+
+
+            .close-button {
+                top: 10px;
+                right: 15px;
+
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ====================
+         1번 : 전시 소개
+         ==================== -->
+
+    <section class="scene intro-scene">
+
+        <div class="intro-content">
+
+            <h2>&lt; 조각: 하나의 구례 &gt;</h2>
+
+            <p>
+                산수유 꽃이 피어나는 구례의 자연처럼,
+            </p>
+
+            <p>
+                주민들의 이야기들이 그림 속에서 피어나게 됩니다.
+            </p>
+
+            <p>
+                구례 주민 한 사람 한 사람이 그린
+            </p>
+
+            <p>
+                각각의 초상화가 모여 하나의 '구례' 얼굴이 됩니다.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ====================
+         2번 : 포스터
+         ==================== -->
+
+    <section class="scene poster">
+
+        <img
+            src="images/poster.jpg"
+            alt="전시 포스터"
+        >
+
+    </section>
+
+
+
+    <!-- ====================
+         3번 : 구례의 소리
+         ==================== -->
+
+    <section class="scene sound-scene">
+
+        <div class="sound-content">
+
+            <p class="small-title">
+                LISTEN
+            </p>
+
+
+            <h2>
+                구례의 소리
+            </h2>
+
+
+            <p class="description">
+                구례에서 채집한 소리를 바탕으로 만든 음악입니다.<br>
+
+                재생 버튼을 누른 후,
+                음악과 함께 전시를 감상해주세요.
+            </p>
+
+
+            <audio controls>
+
+                <source
+                    src="audio/gurye-music.mp3"
+                    type="audio/mpeg"
+                >
+
+                브라우저에서 음악을 재생할 수 없습니다.
+
+            </audio>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ====================
+         4번 : 얼굴에 대한 글
+         ==================== -->
+
+    <section class="scene text-scene">
+
+        <div class="text-content">
+
+            <h2>
+                "얼굴은 익숙하지만<br>
+                &nbsp;&nbsp;그려진 얼굴은 낯설잖아요"
+            </h2>
+
+
+            <p>
+                매일 거울을 통해 만나는 내 모습이지만, 화폭 위에 정성스레 옮겨진 나의 모습을 마주하는 일은 완전히 새로운 감각을 선사합니다. &lt;조각: 하나의 구례&gt; 프로젝트는 익숙하게 지나쳤던 자신의 얼굴을 들여다보고, 그 안에 깃든 스스로의 삶과 시선을 다시금 깊이 있게 바라보며 기록하는 자리였습니다.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ====================
+         5번 : 완성된 얼굴
+         ==================== -->
+
+    <section class="scene face">
+
+        <img
+            src="images/main-face.jpg"
+            alt="구례 주민들의 자화상 콜라주"
+        >
+
+
+        <div class="work-caption">
+
+            <p class="work-title">
+                〈구례의 얼굴〉
+            </p>
+
+
+            <p class="work-info">
+                2026, 색지 · 색연필 · 파스텔, 캔버스, 117 × 91
+            </p>
+
+        </div>
+
+
+        <div class="work-intention">
+
+            <p class="intention-text">
+                한 사람의 얼굴에서, 구례의 얼굴을 만납니다. 구례 주민들이 '구례와 나'를 주제로 그린 자화상입니다. 각자의 얼굴에는 자신이 기억하는 장소와 사람, 자연과 시간이 담겨 있습니다. 서로 다른 조각들이 모여 하나의 얼굴이 되듯, 한 사람의 기억이 모여 우리가 살아가는 구례의 얼굴을 완성합니다.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ====================
+         6번 : 추가 사진에 대한 글
+         ==================== -->
+
+    <section class="scene text7-scene">
+
+        <div class="text7-content">
+
+            <h2>
+                "그냥 그려.<br>
+                &nbsp;사람이나 눈사람이나 다 사람이야"
+            </h2>
+
+
+            <p>
+                붓을 쥐는 손끝은 서툴고 어색했지만, 주민분들은 저마다의 방식으로 용기를 내어 종이 앞에 앉았습니다. 위의 무심한 한마디처럼, 이번 프로젝트는 서툰 붓질 속에서도 각자의 이야기를 나누며 오랜만에 마주한 이웃들이 온기를 더하는 장소가 되었습니다. 거창한 기술 없이도 사람을 향한 따뜻한 시선 그 자체로 이미 훌륭한 예술 작품이 되었습니다.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ====================
+         7번 : 추가 사진
+         ==================== -->
+
+    <section class="scene photo6">
+
+        <img
+            src="images/photo6.jpg"
+            alt="구례 전시 사진"
+        >
+
+    </section>
+
+
+
+    <!-- ====================
+         8번 : 그림에 대한 글
+         ==================== -->
+
+    <section class="scene text8-scene">
+
+        <div class="text8-content">
+
+            <h2>
+                "그림은 호흡이 길잖아요."
+            </h2>
+
+
+            <p>
+                한 주민분께서 무심하게 건넨 한마디처럼, 이번 프로젝트는 빠르게 지나가는 일상 속에서 각자의 이야기를 나누며 오랜만에 보는 구례 주민들이 만나는 장소가 되기도 하였습니다. 예술이 거창하고 멀리 있는 것이 아니라, 사람을 향한 따뜻한 시선과 대화 속에 이미 존재하는 것임을 마을 분들과 함께 느끼는 계기가 되었습니다.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 8번과 9번 사이 Click -->
+
+    <p class="small-title">
+        Click
+    </p>
+
+
+
+    <!-- ====================
+         9번 : 제작 과정
+         ==================== -->
+
+    <section class="scene making-scene">
+
+        <a
+            class="youtube-button"
+            href="https://www.youtube.com/watch?v=G4YJF6KsqLQ"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <img
+                src="images/video-button1.jpg"
+                alt="조각, 하나의 구례 : 제작과정 영상 보기"
+            >
+
+        </a>
+
+    </section>
+
+
+
+    <!-- ====================
+         10번 : 칭찬에 대한 글
+         ==================== -->
+
+    <section class="scene text10-scene">
+
+        <div class="text10-content">
+
+            <h2>
+                "별거 아닌데 이런 걸로 칭찬받으니까 좋네요"
+            </h2>
+
+
+            <p>
+                첫 시작이 어려워 몇 분을 망설이기만 했던 분들도, 완성된 자화상 위에 따뜻한 칭찬과 격려가 이어지자 소박한 미소를 지으셨습니다. 매일 똑같이 반복되던 일상 속에서 누군가 나에게 집중해주고, 나의 도전을 진심으로 응원해주는 경험은 작지만 깊은 울림을 전해 주었습니다.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ====================
+         11번 : 우리가 지나온 구례
+         ==================== -->
+
+    <section class="scene text11-scene">
+
+        <div class="text11-content">
+
+            <h2>
+                우리가 지나온 구례의 순간들을 기록했습니다.
+            </h2>
+
+
+            <p>
+                구례의 자연과 마을, 생활공간과 사람들의 모습을 따라가며 이곳에서 보고, 듣고, 살아가는 순간들을 영상으로 담았습니다. 이 기록은 구례를 설명하기 위한 이미지가 아니라, 지금 이곳을 살아가는 사람들이 기억하는 구례의 모습입니다.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- 11번과 12번 사이 Click -->
+
+    <p class="small-title">
+        Click
+    </p>
+
+
+
+    <!-- ====================
+         12번 : 아카이빙
+         ==================== -->
+
+    <section class="scene archiving-scene">
+
+        <a
+            class="archiving-button"
+            href="https://www.youtube.com/watch?v=uS59tozhvLI"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <img
+                src="images/video-button2.png"
+                alt="조각, 하나의 구례 : 아카이빙 영상 보기"
+            >
+
+        </a>
+
+    </section>
+
+
+
+    <!-- ====================
+         13번 : 예술이라는 게...
+         ==================== -->
+
+    <section class="scene text13-scene">
+
+        <div class="text13-content">
+
+            <h2>
+                "예술이라는 게 시골 사람들에게 어떤 의미인가?"
+            </h2>
+
+
+            <p>
+                주민 분들께서 저희 팀원의 전공(예술경영)에 대한 질문을 하시며 물어보셨던 질문입니다. 이 질문에 대한 단 하나의 정답을 찾기는 어려울지도 모릅니다. 하지만 내 기억과 목소리, 그리고 나만의 얼굴이 주인공이 되는 경험은 주민들의 마음에 소중한 자부심을 남겼습니다. 주민 한 분 한 분의 소소한 소리와 얼굴이 모여 마침내 커다란 구례의 따뜻한 풍경을 완성해 내었습니다.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ====================
+         마지막 영상 팝업 버튼
+         크레딧 위
+         ==================== -->
+
+    <div class="popup-video-trigger">
+
+        <img
+            src="images/video-button.jpg"
+            alt="영상 보기"
+            onclick="openVideo()"
+        >
+
+    </div>
+
+
+
+    <!-- ====================
+         크레딧
+         ==================== -->
+
+    <div class="credits">
+
+        <p>
+            조각: 하나의 구례
+        </p>
+
+        <p>
+            한국예술종합학교 아트 레지던시 x 구례군 협업 프로젝트
+        </p>
+
+        <p>
+            기획 · 제작: 김도양, 이고운, 홍주호 (한예종 예술경영 전공)
+        </p>
+
+    </div>
+
+
+
+    <!-- ====================
+         기존 영상 팝업
+         ==================== -->
+
+    <div
+        id="hidden-video"
+        class="video-popup"
+    >
+
+        <button
+            class="close-button"
+            onclick="closeVideo()"
+            aria-label="영상 닫기"
+        >
+            ×
+        </button>
+
+
+        <video
+            controls
+            playsinline
+        >
+
+            <source
+                src="video/gurye-people.mp4"
+                type="video/mp4"
+            >
+
+            브라우저에서 영상을 재생할 수 없습니다.
+
+        </video>
+
+    </div>
+
+
+
+    <!-- ====================
+         JavaScript
+         ==================== -->
+
+    <script>
+
+        function openVideo() {
+
+            const popup =
+                document.getElementById("hidden-video");
+
+            const video =
+                popup.querySelector("video");
+
+
+            popup.classList.add("show");
+
+            video.currentTime = 0;
+
+            video.play();
+
+        }
+
+
+
+        function closeVideo() {
+
+            const popup =
+                document.getElementById("hidden-video");
+
+            const video =
+                popup.querySelector("video");
+
+
+            video.pause();
+
+            video.currentTime = 0;
+
+            popup.classList.remove("show");
+
+        }
+
+
+        /* 팝업 바깥쪽 클릭 시 닫기 */
+
+        document
+            .getElementById("hidden-video")
+            .addEventListener("click", function(event) {
+
+                if (event.target === this) {
+                    closeVideo();
+                }
+
+            });
+
+
+        /* ESC 키로 닫기 */
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+                closeVideo();
+            }
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
